@@ -1,0 +1,234 @@
+*{
+  /*   border:1px solid black; */
+  }
+  
+  body{
+    background-color: #f2f2f2;
+  }
+  .head{
+    width: 100%;
+    height: 92px;
+    background-color: #7828B4;
+    display:flex;
+    align-items: left;
+  }
+  .logo h2{
+    font-family: Optima-ExtraBlack;
+    font-size: 36px;
+    color:#fff;
+    text-align: center;
+  }
+  .searchbar{
+    width: 400px;
+    height: 92px;
+    display:flex;
+    align-items: center;
+    padding-left:72px;
+      border-bottom: 1px solid 
+  }
+  .fa-search{
+    color:#fff;
+    padding-right:16px;
+  }
+  .form-s{
+    color:#fff;
+    padding-bottom: 4px;
+    border:0;
+    border-bottom:1px solid #ccc;
+    background-color: #7828B4;
+  }
+  .content-main{
+    margin:0 0 30px 38px;
+  }
+  .left{
+    width: 300px;
+    background: #EBEBEB;
+  }
+  .left-box h5{
+    margin-bottom:8px;
+  }
+  .left-box{
+    padding:24px 40px;
+    border-bottom:1px solid #ccc;
+  }
+  .form-control{
+  /*   width:85%; */
+  /*   max-width: 169px; */
+    height: 40px;
+  }
+  .w-from{
+    width: 25% !important;
+  }
+   div#fromLabel #toLabel{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    margin-right: 10px;
+    padding: 10px 0px;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    text-align: right;
+  }
+  input#from #to{
+    width: 70%;
+    height: 40px;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+  }
+  .xx{
+    padding-left:16px;
+  }
+  .yy{
+    margin-left:16px;
+  }
+  
+  /* right */
+  .right{
+    padding:24px 27px;
+  }
+  .showing h4{
+    color:#424242;
+    font-size: 24px;
+  }
+  .btn-outline-info{
+    color:#7828B4;
+    border:1px solid #7828B4;
+  }
+  .btn-c{
+    border-radius: 25px;
+    margin-right:10px;
+    color:#7828B4;
+  }
+  .btn-c:hover{
+    border-radius: 25px;
+    margin-right:10px;
+    background-color: #7828B4;
+    color:#fff;
+    border-color:#7828B4;
+  }
+   
+  .alert-dismissible{
+    padding:0;
+  }
+  .fa-a{
+    font-size: 16px;
+    vertical-align:middle;
+    font-weight: 200;
+    color:#7828B4;
+    margin-left: 8px;
+  }
+  .fa-a:hover{
+    color:#fff;
+  }
+  
+  .main-content{
+
+    margin-top: 40px;
+    width: 780px;
+  /*   box-sizing:bolder-box; */
+  /*   border:1px solid #000; */
+  }
+  .main-content:hover{
+    background-color: #fff;
+    box-shadow:2px 2px 15px 1px rgba(0,0,0,0.1);
+  }
+  div.pic{
+    width: 220px;
+    height:inherit;
+  }
+  .item{
+    background-color: #fff;
+    width: 100%;
+  /*   max-width: 560px; */
+    height: 100%;
+    padding:24px 20px;
+  /*   border:1px solid #000; */
+  }
+  .item h5{
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    color: #9013FE;
+    line-height: 36px;
+  }
+  .item p{
+    width:100%;
+    text-overflow : ellipsis;
+    display : inline-block;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+    overflow : hidden ;
+  }
+  .item span{
+    display: inline;
+    font-family: Roboto-Bold;
+  font-size: 16px;
+  color: #000000;
+  }
+   
+  
+  .tags{
+    display: inline;
+    margin-left: 16px;
+    border-radius: 15px;
+    background-color: #b299e6;
+    color:#fff;
+    padding: 4px 8px;
+  }
+  .sub{
+    margin-top: 16px;
+    font-family: Roboto-Regular;
+    font-size: 16px;
+  }
+  .sub>span{
+    color: #9B9B9B;
+  }
+  .page-link{
+   color:#7828B4;
+  }
+  .page-item >.active{
+    background-color: #7828B4;
+    color:#fff;
+  }
+  .page-num{
+    padding-right:10px;
+    padding-top: 36px;
+    width: 100%;
+    max-width: 780px;
+  /*   border:1px solid #000; */
+    display: flex;
+    justify-content: flex-end;
+  }
+  .col86{
+    padding-left:0px;
+    padding-right:0px;
+  }
+  /*   border:1px solid #000; */
+  input[type="date"]{
+    -webkit-appearance: listbox;
+  }
+
+  .filter-tag {
+    display: inline-block;
+    border-radius: 100px;
+    margin-bottom: 5px;
+    line-height: 35px;
+    color: #9013FE;
+    border: 1px solid #9013FE;
+    font-style: italic;
+    font-weight: 100;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  .main-content{
+    display: flex;
+  }

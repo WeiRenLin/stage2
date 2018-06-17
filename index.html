@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>Filter</title>
+</head>
+
+<body>
+  <div id="listPanel">
+  <header class="head">
+    <div class="container">
+      <!-- <div class="row"> -->
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 logo">
+        <h2>Have Fun</h2>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <div class="searchbar">
+          <i class="fa fa-search "></i>
+          <input type="search" class="form-s form-control " id="formGroupExampleInput" placeholder="Explore your own activities">
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </header>
+
+  <!-- content -->
+  <div class="container">
+    <!-- <div class="row"> -->
+    <div class="col-lg-4 col-md-4 col-xs-12">
+      <div class="left">
+        <div class="left-box">
+          <h5>Location</h5>
+          <div class="form-group">
+            <select id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option value="Taiwan">Taiwan</option>
+              <option value="Koahisung">Koahisung</option>
+            </select>
+          </div>
+        </div>
+        <!--  part-2 -->
+        <div class="left-box">
+            <h5>Date</h5>
+         <div class="form-group">
+            <!-- <p>from<span><input type="date" placeholder="2018/06/12"></span></p> -->
+            <div  id="fromLabel">from</div>
+           <div class=" ">
+              <input type="date" class="form-control " id="from" placeholder="2018/06/12">
+           </div>
+         </div>
+         <div class="form-group ">
+           <div  id="toLabel">to </div>
+           <div class=" ">
+              <input type="date" class="form-control" id="to" placeholder="2018/06/12">
+           </div>
+         </div>
+       </div>
+        <!--   part-3 -->
+        <div class="left-box">
+          <h5>Categories</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="Check1">
+            <label class="form-check-label" for="Check1">
+              All
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="Check2">
+            <label class="form-check-label" for="Check2">
+              Entertainment
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="Check3">
+            <label class="form-check-label" for="Check3">
+              Food
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="Check4">
+            <label class="form-check-label" for="Check4">
+              learning
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="Check5">
+            <label class="form-check-label" for="Check5">
+              Outdoor
+            </label>
+          </div>
+        </div>
+        <!--  part3 end -->
+      </div>
+      <!--   left end -->
+    </div>
+    <!--   col3 -->
+    <div class="col-lg-8 col-md-8 col-xs-12" >
+      <div class="right">
+        <div class="showing" >
+          <h4>Showing
+            <span style="color:#7828B4;" >{{totalnum.total}}</span> results by....</h4>
+          <span class="filter-tag mr-2">ALL
+            <i class="fa fa-times-circle"></i>
+          </span>
+        </div>
+        <!--     中間內容     -->
+        <div class="main-content" v-for="(Dataitem) in Data" >
+          <!-- <div class="row "> -->
+          <!-- <div class="col-12"> -->
+          <div class="pic"  id="pic" style="background-image: url('http://khh.travel/FileArtPic.ashx?id=705&w=1280&h=960')">
+            <!-- <img  class="img-fluid" id="getpicture"> -->
+          </div>
+          <!-- </div> -->
+          <div class="item">
+              <h5>{{Dataitem.Name}}</h5>
+              <p>{{Dataitem.Description}}</p>
+              <span>{{Dataitem.Add}}</span>
+              <div class="tags">{{Dataitem.Zone}}</div>
+              <div class="sub">
+                <i class="fa fa-map-marker mr-2"></i>
+                <span class="mr-3">{{Dataitem.Zone}}</span>
+                <i class="fa fa-calendar mr-2"></i>
+                <span>{{Dataitem.Opentime}}</span>
+              </div>
+          </div>
+          
+          </div>
+        </div>
+
+          <!-- <div class="item">
+            
+            </div>
+          </div> -->
+        <!-- </div> -->
+        <!--      main -->
+        <div class="">
+          <div class="page-num">
+            <nav aria-label="Page navigation example ">
+              <ul class="pagination ">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link active" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      <!--       right -->
+    </div>
+    <!--    col9 -->
+    <!-- </div> -->
+  </div>
+</div>
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jplist/5.1.35/jplist.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jplist/5.1.35/jplist.min.css" />
+<script type="text/javascript" >
+ 
+  new Vue({
+  el: '#listPanel',
+  data: {
+            Data:[] ,
+            totalnum:null , 
+            Picture:null
+  },
+  methods: {
+    getData:function(){
+           $.getJSON('https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97' ,Datas =>{
+               this.Data = Datas.result.records;
+               $.each(this.Data,function(i,img){
+                var $img = $('<img/>', {
+             src: img.Picture1
+           });
+           $('#pic').html("<img src='"+"http://khh.travel/FileArtPic.ashx?id=705&w=1280&h=960"+"'" +"/>" );
+          //  document.getElementById("pic").style.backgroundImage =$img;
+                // $('#getpicture').append($img);
+               })
+               this.totalnum = Datas.result;
+               console.log(this.Data[0].Picture1);
+            })
+        }
+  },
+  mounted() {
+      this.getData();
+    },
+})
+$('document').ready(function(){
+
+//check all jPList javascript options here
+$('#listPanel').jplist({				
+   itemsBox: '.list', 
+   itemPath: '.list-item', 
+   panelPath: '.jplist-panel'	
+});
+
+});
+</script>
